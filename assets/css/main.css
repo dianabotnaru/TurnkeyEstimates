@@ -1,0 +1,532 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #edf0f5;
+    color: #666;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    color: #0bb0c9;
+    font-size: 30pt;
+    font-weight: 300;
+    margin-left: 30px;
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    color: orange;
+    font-size: 20pt;
+}
+
+h2.name {
+    text-align: center;
+    color: #666;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    color: #666;
+}
+
+h3.red {
+    color: red;
+}
+
+a,
+a:hover,
+a:visited {
+    font-family: 'Nunito', sans-serif;
+    color: #0bb0c9;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.clear{
+    clear: both;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.pnl1 {
+    margin-right: -25px;
+}
+.pnl2 {
+    margin-left: -25px;
+}
+
+.ui.segment {
+    background-color: white;
+    margin: 0 30px;
+}
+
+#encounterPart {
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+#encounterPart .ui.segment, #kioskPart .ui.segment{
+    margin: 0;
+}
+
+.ui.secondary.menu {
+    background-color: #0bb0c9;
+    padding: 10px 20px;
+}
+
+.ui.secondary.menu .item {
+    color: white;
+    font-size: 12pt;
+}
+
+.ui.secondary.menu .dropdown.item:hover,
+.ui.secondary.menu .link.item:hover,
+.ui.secondary.menu a.item:hover {
+    color: white;
+}
+
+.ui.table {
+    color: #666;
+}
+
+.ui.table thead th {
+    color: #666;
+}
+
+.ui.button {
+    background-color: #0bb0c9;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    margin: 10px 0;
+}
+
+.ui.button:hover {
+    background-color: #0ebfda;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+.ui.button:focus {
+    background-color: #0ebfda;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+.ui.floating.label {
+    top: -3px;
+    margin: 0em 0em 0em -1.2em !important;
+}
+
+.ui.tabular.menu .active.item {
+    color: #666;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+.ui.tabular.menu .item {
+    color: #666;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+.breadcrumb {
+    color: #0ebfda;
+    text-decoration: none;
+}
+
+.ui.form .field>label {
+    color: #666;
+    font-family: 'Nunito', sans-serif;
+}
+
+.ui.form textarea {
+    margin-bottom: 20px;
+}
+
+.ui.cards>.card>.image,
+.ui.card>.image {
+    background-color: white;
+}
+
+noborder.ui.cards>noborder.card,
+noborder.ui.card {
+    box-shadow: none;
+}
+
+.ui.cards>.card>.content>.header,
+.ui.card>.content>.header {
+    color: #666;
+}
+
+.ui.form textarea {
+    color: #666 !important;
+}
+
+.ui.form input[type="text"] {
+    color: #666 !important;
+}
+
+.ui.form input[type="password"] {
+    color: #666 !important;
+}
+
+.ui.header {
+    color: #0ebfda;
+    font-weight: 300;
+    font-size: 18pt;
+}
+
+.purple-btn.ui.fluid.button {
+    background-color: #6c4099;
+    font-weight: 300;
+}
+
+.purple-text {
+    color: #6c4099;
+}
+
+p.terms {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.ui.steps .step.active .title {
+    color: #0ebfda;
+    font-family: 'Nunito', sans-serif;
+}
+
+.ui.cards > .card {
+    box-shadow: none;
+}
+
+.ui.feed > .event > .content .summary {
+    font-weight: 400;
+}
+
+.ui.small.images .image, .ui.small.images img, .ui.small.images svg, .ui.small.image {
+    width: 80px;
+}
+
+.ui-state-highlight {
+    height: 49px;
+    border: 2px dotted #DEDEDE;
+}
+.ui.macro-list {
+    min-height: 50px;
+    font-size: 18pt;
+}
+
+.ui.statistics .statistic > .value, .ui.statistic > .value {
+    color: orange;
+    font-family: 'Nunito', sans-serif;
+}
+
+.ui.statistics .statistic > .label, .ui.statistic > .label {
+    color: orange;
+    font-family: 'Nunito', sans-serif;
+}
+
+.ui.statistic {
+    margin: 20px;
+}
+
+.ui.table tfoot th {
+    color: #666;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+.ui.dropdown > .text {
+    color: #0ebfda;
+}
+
+.ui.dropdown.field{
+    height: 44px;
+}
+
+.ui.icon.input {
+    margin-right: 20px;
+}
+
+.ui.icon.huge.input{
+    height: 3em;
+    width: 30em;
+}
+
+.ui.action.input input[type="file"] {
+    display: none;
+  }
+
+/*.line-chart{
+    height: 280px !important;
+
+}
+*/
+.div-chart{
+  max-width: 100%;
+  min-width: 100%;
+  height: 28vh !important;  
+}
+
+.subluxations {/*height:60px !important; width:89%;*/ margin: 50px auto; width: 88%;}
+
+.ui-widget.ui-widget-content{ /*border:none !important;*/ border-radius: inherit; border-color: #eaeaea !important;}
+.ui-widget-header{ background:transparent !important;}
+
+.ui-slider .ui-slider-handle {
+    width: 50px !important;
+    height: 50px !important;
+    background: url(../images/handle.png?v=1) no-repeat !important;
+    overflow: hidden;
+    position: absolute;
+    border:none  !important;
+    margin-top: -19px;
+    margin-left: -25px !important;
+    /* top: -20px; */
+    /* border-style: none; */
+}
+
+.subluxations.vertical.ui-slider{
+    height: 258px;
+}
+
+.subluxations.vertical.ui-slider#lsi{
+    margin-left: 30px !important;
+}
+.subluxations.vertical.ui-slider#rsi{
+    margin-right: 30px !important;
+}
+.subluxations.vertical.ui-slider .ui-slider-handle{
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: -25px !important;
+}
+.subluxations.vertical.ui-slider#lsi .ui-slider-handle{
+    margin-left: -15px !important;
+}
+.subluxations.vertical.ui-slider#rsi .ui-slider-handle{
+    margin-left: -15px !important;
+}
+
+.subluxations span{
+    outline: none;
+    text-align: center;
+    line-height: 45px;
+    padding: 0;
+    color: black !important;
+    font-size: 12px;
+    cursor: pointer !important;
+}
+
+.subluxations.small{
+    margin: 25px auto; 
+    width: 100%;
+    height: 5px;
+}
+
+.subluxations.small.ui-slider .ui-slider-handle {
+    width: 20px !important;
+    height: 20px !important;
+    margin-top: -9px;
+    margin-left: -10px !important;
+    background: url(../images/handle_small.png?v=1) no-repeat !important;
+}
+
+.subluxations.small span{
+    font-size: 8px;
+    line-height: 20px;
+}
+
+.content.visit{
+    margin-top: 35px !important;
+}
+
+.visitHR{
+    height:5px; 
+    background-color:black;
+    margin-top: 5px;
+}
+
+.visitHR.small{
+    height: 2px !important; 
+    margin-top: 20px;
+
+}
+
+
+.myHR{
+    margin: 0;
+    background: transparent;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+.ui.list {
+  font-size: 1.2em !important;
+}
+
+.cover-circular{
+    width:100%;
+    max-width: 100%;
+    margin:0;
+    padding:0;
+    height:0;
+    padding-top: 100%;
+
+    overflow:hidden;
+    position:relative;
+
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+
+   border-radius: 500rem
+}
+
+.img-circular{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:500rem;
+}
+
+.flexdatalist{
+}
+
+
+.flexdatalist-results {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #444;
+    border-top: none;
+    background: #fff;
+    z-index: 100000;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    color: #333;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.flexdatalist-results li {
+    border-bottom: 1px solid #ccc;
+    padding: 8px 15px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.flexdatalist-results li span.highlight {
+    font-weight: 700;
+    text-decoration: underline;
+}
+.flexdatalist-results li.active {
+    background: #2B82C9;
+    color: #fff;
+    cursor: pointer;
+}
+.flexdatalist-results li.no-results {
+    font-style: italic;
+    color: #888;
+}
+
+/**
+ * Grouped items
+ */
+.flexdatalist-results li.group {
+    background: #F3F3F4;
+    color: #666;
+    padding: 8px 8px;
+}
+.flexdatalist-results li .group-name {
+    font-weight: 700;
+}
+.flexdatalist-results li .group-item-count {
+    font-size: 85%;
+    color: #777;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+/**
+ * Multiple items
+ */
+.flexdatalist-multiple:before {
+    content: '';
+    display: block;
+    clear: both;
+}
+.flexdatalist-multiple {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    cursor: text;
+}
+.flexdatalist-multiple.disabled {
+    background-color: #eee;
+    cursor: default;
+}
+.flexdatalist-multiple:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.flexdatalist-multiple li {
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+    float: left;
+}
+.flexdatalist-multiple li.input-container,
+.flexdatalist-multiple li.input-container input {
+    border: none;
+    width: 40px;
+    height: auto;
+    padding: 0 0 0 4px;
+    line-height: 24px;
+}
+.flexdatalist-multiple li.value {
+    display: inline-block;
+    padding: 2px 25px 2px 7px;
+    background: #eee;
+    border-radius: 3px;
+    color: #777;
+    line-height: 20px;
+}
+.flexdatalist-multiple li.toggle {
+    cursor: pointer;
+    transition: opacity ease-in-out 300ms;
+}
+.flexdatalist-multiple li.toggle.disabled {
+    text-decoration: line-through;
+    opacity: 0.80;
+}
+
+.flexdatalist-multiple li.value span.fdl-remove {
+    font-weight: 700;
+    padding: 2px 5px;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.70;
+}
+.flexdatalist-multiple li.value span.fdl-remove:hover {
+    opacity: 1;
+}
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+
