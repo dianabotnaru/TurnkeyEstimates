@@ -21,6 +21,8 @@ class Signup extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('Common_mdl');
+
 	}
 
 	public function index()
@@ -31,14 +33,22 @@ class Signup extends CI_Controller {
 	public function verifySignup()
 	{
 		$this->form_validation->set_error_delimiters('<p class="error" style="color:red;text-align: left;">', '</p>');
-		$this->form_validation->set_rules('username', 'Username', 'required');
-		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('username', 'Username', 'required|trim')	;
+		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
 		
-		if ($this->form_validation->run() == FALSE)
+		if ($this->form_validation->run() == TRUE)
 		{
-			
-	       $this->load->view('login/signup');
+			$username = $this->input->post('username');
+			$email = $this->input->post('email');
+			$password = $this->input->post('password');
+
+			$userData = array(
+				'name'  	=> $username,
+				'email' 	=> $email,
+				'password' 	=> $password);
+			$this->Common_mdl->insert('users',$userData);
+	       	$this->load->view('login');
 		}
 		else
 		{
