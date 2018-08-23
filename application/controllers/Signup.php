@@ -34,7 +34,7 @@ class Signup extends CI_Controller {
 	{
 		$this->form_validation->set_error_delimiters('<p class="error" style="color:red;text-align: left;">', '</p>');
 		$this->form_validation->set_rules('username', 'Username', 'required|trim')	;
-		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
+		$this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|callback_checkDBUser');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
 		
 		if ($this->form_validation->run() == TRUE)
@@ -54,6 +54,16 @@ class Signup extends CI_Controller {
 		{
 			$this->load->view('login/signup');
 		}	
+	}
+
+	public function checkDBUser($email){
+		$userData = $this->Common_mdl->select('users',array('email'=>$email));
+		if(!empty($userData)){
+			$this->form_validation->set_message('checkDBUser','This email was already used.');
+			return FALSE;
+		}else{
+			return TRUE;
+		}
 	}
 
 }
