@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Dashboard extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,33 +18,9 @@ class Login extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function __construct()
-	{
-		parent::__construct();
-	}
-
-
 	public function index()
 	{
-		$this->load->view('login');
+		$this->load->view('dashboard');
 	}
-
-	public function verifylogin()
-	{
-		$this->form_validation->set_error_delimiters('<p class="error" style="color:red;text-align: left;">', '</p>');
-		$this->form_validation->set_rules('username', 'Username', 'required');
-		$this->form_validation->set_rules('password', 'Password', 'trim|required');
-		
-		if ($this->form_validation->run() == FALSE)
-		{
-			
-	       $this->load->view('login');
-		}
-		else
-		{
-			$this->load->view('login');
-		}	
-	}
-
 
 }

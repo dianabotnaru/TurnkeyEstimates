@@ -51,12 +51,14 @@
             <i class="user icon"></i>
             <input type="text" name="username" id="username" value="" placeholder="E-mail address">
           </div>
+          <?php echo form_error('username'); ?>
         </div>
         <div class="field">
           <div class="ui left icon input">
             <i class="lock icon"></i>
             <input type="password" name="password" value="" placeholder="Password">
           </div>
+          <?php echo form_error('password'); ?>
         </div>
 
         <input type="submit" name="login_btn" id="login_btn" value="Login" class="ui fluid large submit button">

@@ -18,9 +18,32 @@ class Signup extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
 	public function index()
 	{
 		$this->load->view('login/signup');
+	}
+
+	public function verifySignup()
+	{
+		$this->form_validation->set_error_delimiters('<p class="error" style="color:red;text-align: left;">', '</p>');
+		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required');
+		
+		if ($this->form_validation->run() == FALSE)
+		{
+			
+	       $this->load->view('login/signup');
+		}
+		else
+		{
+			$this->load->view('login/signup');
+		}	
 	}
 
 }
