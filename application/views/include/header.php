@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/dataTables.semanticui.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/semantic.css">
 </head>
 
 <body>

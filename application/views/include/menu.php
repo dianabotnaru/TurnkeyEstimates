@@ -3,16 +3,16 @@
     Dashboard
   </a>
 
-  <a class="item" href="<?php echo base_url();?>dashboard">
+  <a class="item" href="<?php echo base_url();?>Users">
     Users
   </a>
 
-  <a class="item" href="<?php echo base_url();?>dashboard">
+  <a class="item" href="<?php echo base_url();?>History">
     History
   </a>
 
 
-  <a class="item" href="<?php echo base_url();?>dashboard">
+  <a class="item" href="<?php echo base_url();?>Settings">
     Settings
   </a>
 

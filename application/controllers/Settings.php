@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Settings extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -26,13 +26,10 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-		if(empty($this->session->userData['logged_in'])){
-			redirect('login');
-		}else{
-			$users = $this ->Common_mdl->select('users',array());
-			$data['users'] = $users;
-			$this->load->view('dashboard',$data);			
-		}
+		$zipcodes = $this ->Common_mdl->select('zipcode',array());
+		$data['zipcodes'] = $zipcodes;
+
+		$this->load->view('dashboard/settings',$data);
 	}
 
 }
