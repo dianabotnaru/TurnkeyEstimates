@@ -63,7 +63,7 @@
     </table>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+<?php $this->load->view('requiredjs'); ?>
 
 <script>
     $(function() {

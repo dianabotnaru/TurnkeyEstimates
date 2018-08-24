@@ -26,7 +26,7 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-		if(empty($this->session->userData['logged_in'])){
+		if(empty($this->session->userdata['logged_in'])){
 			redirect('login');
 		}else{
 			$users = $this ->Common_mdl->select('users',array());

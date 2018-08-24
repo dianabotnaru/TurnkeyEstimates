@@ -39,13 +39,13 @@ class Forgotpassword extends CI_Controller {
 			$slug = md5($userid . $email . date('Ymd'));
 			$config = Array(
 				'protocol' => 'smtp',
-				'smtp_host' => 'smtp.gmail.com',
-				'smtp_port' => 587,
+				'smtp_host' => 'ssl://smtp.googlemail.com',
+				'smtp_port' => 465,
 				'smtp_user' => 'elijahwrandall@gmail.com', // change it to yours
 				'smtp_pass' => 'knit4Hi~', // change it to yours
-				'mailtype' => 'html',
-				'charset' => 'iso-8859-1',
-				'wordwrap' => TRUE
+			    'mailtype'  => 'html', 
+			    'charset'   => 'iso-8859-1'
+				// 'wordwrap' => TRUE
 			);
             $this->load->library('email', $config);
             $this->email->set_newline("\r\n");  
