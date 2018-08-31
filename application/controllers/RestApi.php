@@ -31,7 +31,7 @@ class RestApi extends CI_Controller
 	public function login(){
 
 		$params = json_decode(file_get_contents('php://input'), TRUE);
-        $username = $params['username'];
+        $username = $params['email'];
         $password = $params['password'];
 
 		//query the database
@@ -42,21 +42,63 @@ class RestApi extends CI_Controller
 			 $sess_array = array();
 			 foreach($result as $row)
 			 {
-				$userData = array(
-					'user_id' 	=> $row->id,
-                    'username' 	=> trim($row->name),
-					'email' 	=> trim($row->email),
-                    'logged_in'	=> TRUE        	  				 
-                );
+			 	$user_id = $row->id;
+				// $userData = array(
+				// 	'user_id' 	=> $row->id,
+    //                 'username' 	=> trim($row->name),
+				// 	'email' 	=> trim($row->email),
+    //                 'logged_in'	=> TRUE        	  				 
+    //             );
 			 }
 			$response = array(
 		 		'success' => true,
-		 		'data' => $userData);
+		 		'userId'  => $user_id,
+		 		'message' => "");
 
 		 }else{
 		 	$response = array(
 		 		'success' => false,
+		 		'userId'  => $user_id,
 		 		'message' => 'Invalid username or password');
+		}
+		echo json_encode($response);	
+	}
+
+	public function signup(){
+
+		$params = json_decode(file_get_contents('php://input'), TRUE);
+
+		$name = $params['name'];
+        $email = $params['email'];
+        $password = $params['password'];
+
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			$response = array(
+		 		'success' => false,
+		 		'userId'  => 0,
+		 		'message' => 'Invalid email format.');
+			echo json_encode($response);	
+			exit;
+		}
+
+        $userData = $this->Common_mdl->select('users',array('email'=>$email));
+		if(!empty($userData)){
+			$response = array(
+		 		'success' => false,
+		 		'userId'  => 0,
+		 		'message' => 'Email was already used.');
+		}else{
+			$newUserData = array(
+				'name'  	=> $name,
+				'email' 	=> $email,
+				'password' 	=> $password);
+
+			$user_id =$this->Common_mdl->insert('users',$newUserData);
+
+			$response = array(
+		 		'success' => true,
+		 		'userId'  => $user_id,
+		 		'message' => '');
 		}
 		echo json_encode($response);	
 	}
